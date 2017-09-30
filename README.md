@@ -1,34 +1,21 @@
 # ModernCS - A Modern Cheat Sheet Class for LaTeX
-ModernCS is a custom LaTeX class designed to facilitate the creation of beautiful cheat sheets. It aims to provide a simple set of tools to generate modern looking documents where it's easy to find whatever you're looking for at a glance.
+ModernCS is a custom [LaTeX](https://en.wikipedia.org/wiki/LaTeX) class designed to facilitate the creation of beautiful cheat sheets. It aims to provide a simple set of tools to generate modern looking documents where it's easy to find whatever you're looking for at a glance.
 
 ## Getting Started
 
 The following three sections briefly touch upon what software you need to have installed on your system and how to use / install the modernCS class for your own cheat sheets. Additionally we provide a simple example of how to work with the class. Here's a list of important files with a short description:
 * `modernCS.cls` - This is the actual class file
 * `CheatSheet_Example.tex` - An example LaTeX document, which makes use of the modernCS class
-* `niceListings.tex` - Some LateX code (you can easily customize it) to make potential code listings in your cheat sheet look nicer
+* `niceListings.tex` - Some LaTeX code (you can easily customize it) to make potential code listings in your cheat sheet look nicer
 
 ### Prerequisites
 
 Since this is a LaTeX class you obviously need to have a working installation of LaTeX itself, I recommend [TeXLive](https://www.tug.org/texlive/). Additionally an editor (e.g. [Sublime](https://www.sublimetext.com/3) with the [LaTeXing](http://www.latexing.com/) package) and a PDF reader (e.g. [Sumatra](https://www.sumatrapdfreader.org/free-pdf-reader.html)) are required.
 
 ### Installation
+In principle, using the class is as simple as copying the `modernCS.cls` file in the same folder as your `CheatSheet.tex` file and referencing it with `\documentclass{modernCS}`. If you want the same style for code listings as shown in the example cheat sheet, you also need to place `niceListings.tex` in the same folder and load it with `\input{niceListings}` in the preamble of your cheat sheet document.
 
-A step by step series of examples that tell you have to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
+You might however want to place these file within a more general directory accessible to your LaTeX distribution of choice, such that you only have one copy of the files on your system even if you have multiple cheat sheets in multiple folders. This also allows you to just change the files in one central location once a new version is released. The steps necessars to accomplish this vary depending on your LaTeX distribution and operating system. A quick google search should send you on the right track.
 
 ### Simple Example
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
