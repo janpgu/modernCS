@@ -15,7 +15,7 @@ Since this is a LaTeX class you obviously need to have a working installation of
 ### Installation
 In principle, using the class is as simple as copying the `modernCS.cls` file in the same folder as your `CheatSheet.tex` file and referencing it with `\documentclass{modernCS}`. If you want the same style for code listings as shown in the example cheat sheet, you also need to place `niceListings.tex` in the same folder and load it with `\input{niceListings}` in the preamble of your cheat sheet document.
 
-You might however want to place these files within a more general directory accessible to your LaTeX distribution of choice, such that you only have one copy of the files on your system even if you have multiple cheat sheets in multiple folders. This also allows you to just change the files in one central location once a new version is released. The steps necessary to accomplish this vary depending on your LaTeX distribution and operating system. A quick google search should enable you to do this within a few minutes.
+You might however want to place these files within a more general directory accessible to your LaTeX distribution of choice, such that you only have one copy of the files on your system even if you have multiple cheat sheets in multiple folders. This also allows you to just change the files in one central location once a new version is released. The steps necessary to accomplish this vary depending on your LaTeX distribution and operating system. A quick google search should enable you to do this in a few minutes.
 
 ### Simple Example
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -25,8 +25,8 @@ consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-## Dependencies
-
+## Development
+### Dependencies
 * [multicol](https://ctan.org/pkg/multicol?lang=en)
 * [etoolbox](https://ctan.org/pkg/etoolbox?lang=en)
 * [geometry](https://ctan.org/pkg/geometry?lang=en)
@@ -36,6 +36,12 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 * [enumitem](https://ctan.org/pkg/enumitem?lang=en)
 * [fontawesome](https://www.ctan.org/tex-archive/fonts/fontawesome)
 * [hyperref](https://ctan.org/pkg/hyperref?lang=en)
+
+### Upcoming Features
+* Custom commands for math formulas (e.g. boxed equations) <img src="https://img.shields.io/badge/priority-high-brightgreen.svg">
+* Support for various class options such as paper size, orientation, amount of columns, and color scheme <img src="https://img.shields.io/badge/priority-medium-yellow.svg">
+* More title fields such as email, donation link to thank author of a particular cheat sheet, etc. <img src="https://img.shields.io/badge/priority-medium-yellow.svg">
+* Possibility to specify a logo for the title section (e.g. the Python logo for a Python cheat sheet) <img src="https://img.shields.io/badge/priority-low-red.svg">
 
 <!-- ## Contributing
 
