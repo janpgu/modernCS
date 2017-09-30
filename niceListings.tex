@@ -1,0 +1,36 @@
+% Title:        niceListings
+% Author:       Jan Guggenbuehler
+% Description:  Some simple adjustments to the default
+%               styling of code listings
+% Date:         2017-9-30
+
+\usepackage{listings} % code listings
+\usepackage{lstautogobble} % fix relative indenting in code listings
+\usepackage{zi4} % font for code listing
+
+% Define custom colors for code listings
+\definecolor{bluekeywords}{rgb}{0.13, 0.13, 1}
+\definecolor{greencomments}{rgb}{0, 0.5, 0}
+\definecolor{redstrings}{rgb}{0.9, 0, 0}
+\definecolor{graynumbers}{rgb}{0.5, 0.5, 0.5}
+
+% Define style options for nicer code listings
+\lstset{
+    autogobble,
+    columns=fullflexible,
+    showspaces=false,
+    showtabs=false,
+    breaklines=true,
+    showstringspaces=false,
+    breakatwhitespace=true,
+    escapeinside={(*@}{@*)},
+    commentstyle=\color{greencomments},
+    keywordstyle=\color{bluekeywords},
+    stringstyle=\color{redstrings},
+    numberstyle=\color{graynumbers},
+    basicstyle=\ttfamily\footnotesize,
+    framesep=12pt,
+    xleftmargin=12pt,
+    tabsize=4,
+    captionpos=b
+}
