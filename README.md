@@ -14,7 +14,7 @@ What things you need to install the software and how to install them
 Give examples
 ```
 
-### Installing
+### Installation
 
 A step by step series of examples that tell you have to get a development env running
 
@@ -52,26 +52,26 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 * [fontawesome](https://www.ctan.org/tex-archive/fonts/fontawesome)
 * [hyperref](https://ctan.org/pkg/hyperref?lang=en)
 
-## Contributing
+<!-- ## Contributing
 
 Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).  -->
 
 ## Authors
 
-* **Jan P. Guggenbuehler** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Jan P. Guggenbuehler** <!-- - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project. -->
 
-## License
+<!-- ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details -->
 
 ## Acknowledgments
 
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
+* [ShareLatex - Writing your own class](https://www.sharelatex.com/learn/Writing_your_own_class)
+* [James Allen - How to write a LaTeX class file and design your own CV](https://www.sharelatex.com/blog/2011/03/27/how-to-write-a-latex-class-file-and-design-your-own-cv.html)
+* [The LaTeX3 Project - LaTeX2e for class and package writers](https://www.latex-project.org/help/documentation/clsguide.pdf)
