@@ -32,11 +32,25 @@ until finished
 
 End with an example of getting some data out of the system or using it for a little demo
 
+### Simple Example
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
 ## Dependencies
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [multicol](https://ctan.org/pkg/multicol?lang=en)
+* [etoolbox](https://ctan.org/pkg/etoolbox?lang=en)
+* [geometry](https://ctan.org/pkg/geometry?lang=en)
+* [xcolor](https://ctan.org/pkg/xcolor?lang=en)
+* [titlesec](https://ctan.org/pkg/titlesec?lang=en)
+* [titling](https://ctan.org/pkg/titling?lang=en)
+* [enumitem](https://ctan.org/pkg/enumitem?lang=en)
+* [fontawesome](https://www.ctan.org/tex-archive/fonts/fontawesome)
+* [hyperref](https://ctan.org/pkg/hyperref?lang=en)
 
 ## Contributing
 
