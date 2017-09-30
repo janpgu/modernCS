@@ -39,9 +39,9 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 ### Upcoming Features
 * Custom commands for math formulas (e.g. boxed equations) <img src="https://img.shields.io/badge/priority-high-brightgreen.svg" align="right">
-* Support for various class options such as paper size, orientation, amount of columns, and color scheme <img src="https://img.shields.io/badge/priority-medium-yellow.svg">
-* More title fields such as email, donation link to thank author of a particular cheat sheet, etc. <img src="https://img.shields.io/badge/priority-medium-yellow.svg">
-* Possibility to specify a logo for the title section (e.g. the Python logo for a Python cheat sheet) <img src="https://img.shields.io/badge/priority-low-red.svg">
+* Support for various class options such as paper size, orientation, amount of columns, and color scheme <img src="https://img.shields.io/badge/priority-medium-yellow.svg" align="right">
+* More title fields such as email, donation link to thank author of a particular cheat sheet, etc. <img src="https://img.shields.io/badge/priority-medium-yellow.svg" align="right">
+* Possibility to specify a logo for the title section (e.g. the Python logo for a Python cheat sheet) <img src="https://img.shields.io/badge/priority-low-red.svg" align="right">
 
 <!-- ## Contributing
 
