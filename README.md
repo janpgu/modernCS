@@ -3,16 +3,14 @@ ModernCS is a custom LaTeX class designed to facilitate the creation of beautifu
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+The following three sections briefly touch upon what software you need to have installed on your system and how to use / install the modernCS class for your own cheat sheets. Additionally we provide a simple example of how to work with the class. Here's a list of important files with a short description:
+* `modernCS.cls` - This is the actual class file
+* `CheatSheet_Example.tex` - An example LaTeX document, which makes use of the modernCS class
+* `niceListings.tex` - Some LateX code (you can easily customize it) to make potential code listings in your cheat sheet look nicer
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
-
-
-```
-Give examples
-```
+Since this is a LaTeX class you obviously need to have a working installation of LaTeX itself, I recommend [TeXLive](https://www.tug.org/texlive/). Additionally an editor (e.g. [Sublime](https://www.sublimetext.com/3) with the [LaTeXing](http://www.latexing.com/) package) and a PDF reader (e.g. [Sumatra](https://www.sumatrapdfreader.org/free-pdf-reader.html)) are required.
 
 ### Installation
 
@@ -62,9 +60,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Jan P. Guggenbuehler** <!-- - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project. -->
+* **Jan P. Guggenbuehler**
 
 <!-- ## License
 
