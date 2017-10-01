@@ -18,7 +18,7 @@
 \RequirePackage{titling} % commands like \theauthor, \thetitle
 \RequirePackage{enumitem} % global spacing options for itemize and enumerate
 \RequirePackage{fontawesome} % cool icons for web, twitter, github below title
-\RequirePackage{hyperref} % make fontawesome icons into links / buttons
+\RequirePackage[hidelinks]{hyperref} % make fontawesome icons into links / buttons
 
 % Set layout options
 \geometry{a4paper, landscape, margin=0.25in}
