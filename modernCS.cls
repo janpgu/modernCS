@@ -1,7 +1,7 @@
 % Title:		    modernCS
-% Author: 		  Jan Guggenbuehler
-% Description:	A modern cheat sheet class
-%               for beautiful cheat sheets made with LaTeX
+% Author: 		  	Jan Guggenbuehler
+% Description:		A modern cheat sheet class
+%               	for beautiful cheat sheets made with LaTeX
 % Date:			    2017-9-30
 
 \NeedsTeXFormat{LaTeX2e}
@@ -19,11 +19,15 @@
 \RequirePackage{enumitem} % global spacing options for itemize and enumerate
 \RequirePackage{fontawesome} % cool icons for web, twitter, github below title
 \RequirePackage[hidelinks]{hyperref} % make fontawesome icons into links / buttons
+\RequirePackage{mdframed} % used for framed boxes like the definition box
 
 % Set layout options
 \geometry{a4paper, landscape, margin=0.25in}
 \pagestyle{empty} % no page numbers
 \setlength{\parindent}{0pt} % no indent after new lines
+
+% Set global spacing option for framed boxes made with mdframed package
+\mdfsetup{skipabove=5pt,skipbelow=5pt}
 
 % Reduce spacing for itemize and enumerate
 \setitemize{noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt}
@@ -40,7 +44,7 @@
 {}
 {0pt}
 {\colorsection{RoyalPurple}} % background color
-\titlespacing*{\section}{-2pt}{\baselineskip}{-\baselineskip}
+\titlespacing*{\section}{-3pt}{\baselineskip}{-\baselineskip}
 
 % Redefine subsection to use fancy color box
 \titleformat{name=\subsection}[block]
@@ -48,7 +52,7 @@
 {}
 {0pt}
 {\colorsection{Cerulean}} % background color
-\titlespacing*{\subsection}{-2pt}{\baselineskip}{-\baselineskip}
+\titlespacing*{\subsection}{-3pt}{\baselineskip}{-\baselineskip}
 
 % Redefine subsubsection to use fancy color box
 \titleformat{name=\subsubsection}[block]
@@ -56,11 +60,18 @@
 {}
 {0pt}
 {\colorsection{BlueGreen}} % background color
-\titlespacing*{\subsubsection}{-2pt}{\baselineskip}{-\baselineskip}
+\titlespacing*{\subsubsection}{-3pt}{\baselineskip}{-\baselineskip}
 
 % Setup multiple columns for classic cheat sheet layout
 \AtBeginDocument{\begin{multicols*}{3}}
 \AtEndEnvironment{document}{\end{multicols*}}
+
+% Custom box for text definitions
+\newcommand*{\defbox}[2]{
+	\begin{mdframed}[backgroundcolor=gray!10]
+		\textbf{#1:} #2
+	\end{mdframed}
+}
 
 % Some custom commands for the title section
 % Website

@@ -36,9 +36,11 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 * [enumitem](https://ctan.org/pkg/enumitem?lang=en)
 * [fontawesome](https://www.ctan.org/tex-archive/fonts/fontawesome)
 * [hyperref](https://ctan.org/pkg/hyperref?lang=en)
+* [mdframed](https://ctan.org/pkg/mdframed?lang=en)
 
 ### Upcoming Features
 * Custom commands for math formulas (e.g. boxed equations) <img src="https://img.shields.io/badge/priority-high-brightgreen.svg" align="right">
+* Custom command for text definitions <img src="https://img.shields.io/badge/priority-high-brightgreen.svg" align="right">
 * Support for various class options such as paper size, orientation, amount of columns, and color scheme <img src="https://img.shields.io/badge/priority-medium-yellow.svg" align="right">
 * More title fields such as email, donation link to thank author of a particular cheat sheet, etc. <img src="https://img.shields.io/badge/priority-medium-yellow.svg" align="right">
 * Implement an option to render the entire cheat sheet more compact <img src="https://img.shields.io/badge/priority-low-red.svg" align="right">
