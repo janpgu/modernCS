@@ -22,7 +22,7 @@
 \RequirePackage{mdframed} % used for framed boxes like the definition box
 \RequirePackage{empheq}
 \RequirePackage[most]{tcolorbox}
-\tcbset{highlight math style={boxsep=1mm,colback=blue!10, boxrule=0.5pt}}
+\tcbset{highlight math style={boxsep=1mm,colback=gray!10, boxrule=0.5pt}}
 
 % Set layout options
 \geometry{a4paper, landscape, margin=0.25in}
@@ -128,13 +128,15 @@
 	\colorsection{gray!0}{ % white background
   		{\huge\thetitle} \\
   		% Only do something if user has defined field in his document
-      \@ifundefined{@subtitle}{}{{\Large \@subtitle}} \par
+      	\@ifundefined{@subtitle}{}{{\Large \@subtitle}}
+      	\par
   		\@ifundefined{@website}{}{\@website}
   		\@ifundefined{@twitter}{}{\@twitter}
   		\@ifundefined{@github}{}{\@github}
-  		\@ifundefined{@email}{}{\@email}
-  		\@ifundefined{@donate}{}{\@donate}
-  		\@ifundefined{@editsheet}{}{\@editsheet} \par
+  		% \@ifundefined{@email}{}{\@email}
+  		% \@ifundefined{@donate}{}{\@donate}
+  		% \@ifundefined{@editsheet}{}{\@editsheet}
+  		\par
   		\@ifundefined{@author}{}{{\footnotesize by \theauthor}} \par
   		\@ifundefined{@institution}{}{{\footnotesize \@institution}} \par
   		{\footnotesize\thedate}
