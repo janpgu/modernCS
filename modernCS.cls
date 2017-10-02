@@ -20,6 +20,9 @@
 \RequirePackage{fontawesome} % cool icons for web, twitter, github below title
 \RequirePackage[hidelinks]{hyperref} % make fontawesome icons into links / buttons
 \RequirePackage{mdframed} % used for framed boxes like the definition box
+\RequirePackage{empheq}
+\RequirePackage[most]{tcolorbox}
+\tcbset{highlight math style={boxsep=1mm,colback=blue!10, boxrule=0.5pt}}
 
 % Set layout options
 \geometry{a4paper, landscape, margin=0.25in}
@@ -32,6 +35,26 @@
 % Reduce spacing for itemize and enumerate
 \setitemize{noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt}
 \setenumerate{noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt}
+
+% % Customize various spacing options
+% % Reduce spacing for tabular
+% \AtBeginEnvironment{tabular}{\vspace*{-0.1cm}}
+% \AtEndEnvironment{tabular}{\vspace*{-0.4cm}}
+% % Reduce spacing for listing
+% \AtBeginEnvironment{lstlisting}{\vspace*{-0.1cm}}
+% \AtEndEnvironment{lstlisting}{\vspace*{-0.1cm}}
+% % Reduce spacing for align
+% \AtBeginEnvironment{align}{\vspace*{-0.1cm}}
+% \AtEndEnvironment{align}{\vspace*{-0.4cm}}
+% % Reduce spacing for align*
+% \AtBeginEnvironment{align*}{\vspace*{-0.1cm}}
+% \AtEndEnvironment{align*}{\vspace*{-0.4cm}}
+% % Reduce spacing for equation
+% \AtBeginEnvironment{equation}{\vspace*{-0.1cm}}
+% \AtEndEnvironment{equation}{\vspace*{-0.4cm}}
+% % Reduce spacing for equation*
+% \AtBeginEnvironment{equation*}{\vspace*{-0.1cm}}
+% \AtEndEnvironment{equation*}{\vspace*{-0.4cm}}
 
 % Color box for sections, subsections, and subsubsections
 \newcommand{\colorsection}[2]{
@@ -73,17 +96,32 @@
 	\end{mdframed}
 }
 
+% Custom box for important equations
+\newcommand*{\impeq}[1]{
+	\begin{empheq}[box=\tcbhighmath]{equation*}
+		#1
+	\end{empheq}
+}
+
 % Some custom commands for the title section
+% Subtitle
+\newcommand*{\subtitle}[1]{\gdef\@subtitle{#1}}
+% Institution
+\newcommand*{\institution}[1]{\gdef\@institution{#1}}
 % Website
 \newcommand*{\website}[1]{\gdef\@website{\href{#1}{\faicon{globe}}}}
 % Twiter
 \newcommand*{\twitter}[1]{\gdef\@twitter{\href{#1}{\faicon{twitter}}}}
 % GitHub
 \newcommand*{\github}[1]{\gdef\@github{\href{#1}{\faicon{github}}}}
-% Institution
-\newcommand*{\institution}[1]{\gdef\@institution{#1}}
-% Subtitle
-\newcommand*{\subtitle}[1]{\gdef\@subtitle{#1}}
+% Email
+\newcommand*{\email}[1]{\gdef\@email{\href{mailto:#1}{\faicon{envelope}}}}
+% Donate to author of cheat sheet
+\newcommand*{\donate}[1]{\gdef\@donate{\href{#1}{\faicon{cc-paypal}}}}
+% Edit Cheat Sheet Link
+\newcommand*{\editsheet}[1]{\gdef\@editsheet{\href{#1}{\faicon{pencil}}}}
+
+
 
 % Customize title section
 \renewcommand{\maketitle}{
@@ -93,7 +131,10 @@
       \@ifundefined{@subtitle}{}{{\Large \@subtitle}} \par
   		\@ifundefined{@website}{}{\@website}
   		\@ifundefined{@twitter}{}{\@twitter}
-  		\@ifundefined{@github}{}{\@github} \par
+  		\@ifundefined{@github}{}{\@github}
+  		\@ifundefined{@email}{}{\@email}
+  		\@ifundefined{@donate}{}{\@donate}
+  		\@ifundefined{@editsheet}{}{\@editsheet} \par
   		\@ifundefined{@author}{}{{\footnotesize by \theauthor}} \par
   		\@ifundefined{@institution}{}{{\footnotesize \@institution}} \par
   		{\footnotesize\thedate}
