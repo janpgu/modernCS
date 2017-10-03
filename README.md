@@ -47,7 +47,7 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 ## Features
 <a name="mainfeatures"></a>
 ### Brief Overview of Main Features
-* Great layout preset for a cheat sheet with totally redefined sections and subsections
+* Great layout presets for a cheat sheet with totally redefined sections and subsections
 * Support for many different beautiful color schemes
 * Custom commands for math formulas (e.g. boxed equations)
 * Custom command for text definitions
