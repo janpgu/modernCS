@@ -47,8 +47,20 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 ## Features
 <a name="mainfeatures"></a>
 ### Brief Overview of Main Features
+* Great layout preset for a cheat sheet with totally redefined sections and subsections
+* Support for many different beautiful color schemes
+* Custom commands for math formulas (e.g. boxed equations)
+* Custom command for text definitions
+* Customizable title section with links to author's website, Twitter, and GitHub if desired
+
 <a name="documentation"></a>
 ### Full Documentation
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 <a name="development"></a>
 ## Development
@@ -67,11 +79,8 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 <a name="upcoming"></a>
 ### Upcoming Features
-* Custom commands for math formulas (e.g. boxed equations) <img src="https://img.shields.io/badge/priority-high-brightgreen.svg" align="right">
-* Custom command for text definitions <img src="https://img.shields.io/badge/priority-high-brightgreen.svg" align="right">
-* Support for various class options such as paper size, orientation, amount of columns, and color scheme <img src="https://img.shields.io/badge/priority-medium-yellow.svg" align="right">
-* More title fields such as email, donation link to thank author of a particular cheat sheet, etc. <img src="https://img.shields.io/badge/priority-medium-yellow.svg" align="right">
-* Implement an option to render the entire cheat sheet more compact <img src="https://img.shields.io/badge/priority-low-red.svg" align="right">
+* Enable user to pick the amount of columns used as a class option <img src="https://img.shields.io/badge/priority-high-brightgreen.svg" align="right">
+* Implement an option to render the entire cheat sheet more compact <img src="https://img.shields.io/badge/priority-med-yellow.svg" align="right">
 * Possibility to specify a logo for the title section (e.g. the Python logo for a Python cheat sheet) <img src="https://img.shields.io/badge/priority-low-red.svg" align="right">
 
 <a name="authors"></a>
