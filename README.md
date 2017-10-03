@@ -6,13 +6,14 @@ ModernCS is a custom [LaTeX](https://en.wikipedia.org/wiki/LaTeX) class designed
     * [Prerequisites](#prerequisites)
     * [Installation](#installation)
     * [Simple Example](#simple)
-3. [Features](#features)
+2. [Features](#features)
     * [Brief Overview of Main Features](#mainfeatures)
     * [Full Documentation](#documentation)
-2. [Development](#development)
+3. [Development](#development)
     * [Dependencies](#dependencies)
     * [Upcoming Features](#upcoming)
-4. [Acknowledgements](#authors)
+4. [Authors and Contributors](#authors)
+5. [Acknowledgements](#authors)
 
 <a name="gettingstarted"></a>
 ## Getting Started
@@ -76,7 +77,7 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 <a name="authors"></a>
 ## Authors and Contributors
 
-* **Jan P. Guggenbuehler**
+* **Jan P. Guggenbuehler** - Main author
 
 <a name="acknowledgements"></a>
 ## Acknowledgments
