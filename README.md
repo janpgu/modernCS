@@ -3,9 +3,12 @@ ModernCS is a custom [LaTeX](https://en.wikipedia.org/wiki/LaTeX) class designed
 
 ## Table of Contents
 1. [Getting Started](#gettingstarted)
-1. [Development](#development)
+2. [Development](#development)
+3. [Features](#features)
+4. [Acknowledgements](#authors)
 
-## Getting Started <a name="gettingstarted"></a>
+<a name="gettingstarted"></a>
+## Getting Started
 
 The following three sections briefly touch upon what software you need to have installed on your system and how to use / install the modernCS class for your own cheat sheets. Additionally we provide a simple example of how to work with the class. Here's a list of important files with a short description:
 * `modernCS.cls` - This is the actual class file
@@ -29,7 +32,13 @@ consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-## Development <a name="development"></a>
+<a name="features"></a>
+## Features
+### Brief Overview of Main Features
+### Full Documentation
+
+<a name="development"></a>
+## Development
 ### Dependencies
 * [multicol](https://ctan.org/pkg/multicol?lang=en)
 * [etoolbox](https://ctan.org/pkg/etoolbox?lang=en)
@@ -50,22 +59,12 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 * Implement an option to render the entire cheat sheet more compact <img src="https://img.shields.io/badge/priority-low-red.svg" align="right">
 * Possibility to specify a logo for the title section (e.g. the Python logo for a Python cheat sheet) <img src="https://img.shields.io/badge/priority-low-red.svg" align="right">
 
-<!-- ## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).  -->
-
-## Authors
+<a name="authors"></a>
+## Authors and Contributors
 
 * **Jan P. Guggenbuehler**
 
-<!-- ## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details -->
-
+<a name="acknowledgements"></a>
 ## Acknowledgments
 
 * [ShareLatex - Writing your own class](https://www.sharelatex.com/learn/Writing_your_own_class)
