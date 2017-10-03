@@ -3,8 +3,9 @@ ModernCS is a custom [LaTeX](https://en.wikipedia.org/wiki/LaTeX) class designed
 
 ## Table of Contents
 1. [Getting Started](#gettingstarted)
-2. [Development](#development)
+    * [Prerequisites](#prerequisites)
 3. [Features](#features)
+2. [Development](#development)
 4. [Acknowledgements](#authors)
 
 <a name="gettingstarted"></a>
@@ -15,6 +16,7 @@ The following three sections briefly touch upon what software you need to have i
 * `CheatSheet_Example.tex` - An example LaTeX document, which makes use of the modernCS class
 * `niceListings.tex` - Some LaTeX code (you can easily customize it) to make code listings in your cheat sheet look nicer
 
+<a name="prerequisites"></a>
 ### Prerequisites
 
 Since this is a LaTeX class you obviously need to have a working installation of LaTeX itself, I recommend [TeXLive](https://www.tug.org/texlive/). Additionally an editor (e.g. [Sublime](https://www.sublimetext.com/3) with the [LaTeXing](http://www.latexing.com/) package) and a PDF reader (e.g. [Sumatra](https://www.sumatrapdfreader.org/free-pdf-reader.html)) are required.
