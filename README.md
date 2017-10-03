@@ -4,7 +4,11 @@ ModernCS is a custom [LaTeX](https://en.wikipedia.org/wiki/LaTeX) class designed
 ## Table of Contents
 1. [Getting Started](#gettingstarted)
     * [Prerequisites](#prerequisites)
+    * [Installation](#installation)
+    * [Simple Example](#simple)
 3. [Features](#features)
+    * [Brief Overview of Main Features](#mainfeatures)
+    * [Full Documentation](#documentation)
 2. [Development](#development)
 4. [Acknowledgements](#authors)
 
@@ -21,11 +25,13 @@ The following three sections briefly touch upon what software you need to have i
 
 Since this is a LaTeX class you obviously need to have a working installation of LaTeX itself, I recommend [TeXLive](https://www.tug.org/texlive/). Additionally an editor (e.g. [Sublime](https://www.sublimetext.com/3) with the [LaTeXing](http://www.latexing.com/) package) and a PDF reader (e.g. [Sumatra](https://www.sumatrapdfreader.org/free-pdf-reader.html)) are required.
 
+<a name="installation"></a>
 ### Installation
 In principle, using the class is as simple as copying the `modernCS.cls` file in the same folder as your `CheatSheet.tex` file and referencing it with `\documentclass{modernCS}`. If you want the same style for code listings as shown in the example cheat sheet, you also need to place `niceListings.tex` in the same folder and load it with `\input{niceListings}` in the preamble of your cheat sheet document.
 
 You might however want to place these files within a more general directory accessible to your LaTeX distribution of choice, such that you only have one copy of the files on your system even if you have multiple cheat sheets in multiple folders. This also allows you to just change the files in one central location once a new version is released. The steps necessary to accomplish this vary depending on your LaTeX distribution and operating system. A quick google search should enable you to do this in a few minutes.
 
+<a name="simple"></a>
 ### Simple Example
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -36,11 +42,14 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 <a name="features"></a>
 ## Features
+<a name="mainfeatures"></a>
 ### Brief Overview of Main Features
+<a name="documentation"></a>
 ### Full Documentation
 
 <a name="development"></a>
 ## Development
+<a name="dependencies"></a>
 ### Dependencies
 * [multicol](https://ctan.org/pkg/multicol?lang=en)
 * [etoolbox](https://ctan.org/pkg/etoolbox?lang=en)
@@ -53,6 +62,7 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 * [hyperref](https://ctan.org/pkg/hyperref?lang=en)
 * [mdframed](https://ctan.org/pkg/mdframed?lang=en)
 
+<a name="upcoming"></a>
 ### Upcoming Features
 * Custom commands for math formulas (e.g. boxed equations) <img src="https://img.shields.io/badge/priority-high-brightgreen.svg" align="right">
 * Custom command for text definitions <img src="https://img.shields.io/badge/priority-high-brightgreen.svg" align="right">
