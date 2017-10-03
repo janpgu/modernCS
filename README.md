@@ -10,6 +10,8 @@ ModernCS is a custom [LaTeX](https://en.wikipedia.org/wiki/LaTeX) class designed
     * [Brief Overview of Main Features](#mainfeatures)
     * [Full Documentation](#documentation)
 2. [Development](#development)
+    * [Dependencies](#dependencies)
+    * [Upcoming Features](#upcoming)
 4. [Acknowledgements](#authors)
 
 <a name="gettingstarted"></a>
