@@ -1,9 +1,3 @@
-% Title:		    modernCS
-% Author: 		  	Jan Guggenbuehler
-% Description:		A modern cheat sheet class
-%               	for beautiful cheat sheets made with LaTeX
-% Date:			    2017-9-30
-
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{modernCS}[2017/09/30 A modern cheat sheet class for LaTeX]
 
@@ -13,7 +7,7 @@
 \RequirePackage{multicol} % multiple column layout
 \RequirePackage{etoolbox} % certain hooks like AtBeginDocument
 \RequirePackage{geometry} % paper size, orientation, margins, etc.
-\RequirePackage[dvipsnames]{xcolor} % better color support
+\RequirePackage[usenames, dvipsnames]{xcolor} % better color support
 \RequirePackage{titlesec} % change default styling of (sub)(sub)sections
 \RequirePackage{titling} % commands like \theauthor, \thetitle
 \RequirePackage{enumitem} % global spacing options for itemize and enumerate
@@ -24,8 +18,39 @@
 \RequirePackage[most]{tcolorbox}
 \tcbset{highlight math style={boxsep=1mm,colback=gray!10, boxrule=0.5pt}}
 
+% Handle Class options
+% Paper orientation (lanscape vs. portrait)
+\newcommand{\theorientation}{landscape}
+\DeclareOption{landscape}{\renewcommand{\theorientation}{landscape}}
+\DeclareOption{portrait}{\renewcommand{\theorientation}{portrait}}
+% Color scheme
+\newcommand{\seccolor}{RoyalPurple}
+\newcommand{\subseccolor}{Cerulean}
+\newcommand{\subsubseccolor}{BlueGreen}
+\DeclareOption{blue}{
+  \renewcommand{\seccolor}{RoyalPurple}
+  \renewcommand{\subseccolor}{Cerulean}
+  \renewcommand{\subsubseccolor}{BlueGreen}
+  }
+\DeclareOption{green}{
+  \renewcommand{\seccolor}{OliveGreen}
+  \renewcommand{\subseccolor}{PineGreen}
+  \renewcommand{\subsubseccolor}{LimeGreen}
+  }
+\DeclareOption{red}{
+  \renewcommand{\seccolor}{BrickRed}
+  \renewcommand{\subseccolor}{Orange}
+  \renewcommand{\subsubseccolor}{Dandelion}
+  }
+\DeclareOption{mono}{
+  \renewcommand{\seccolor}{black}
+  \renewcommand{\subseccolor}{black!65}
+  \renewcommand{\subsubseccolor}{gray!80}
+  }
+\ProcessOptions\relax
+
 % Set layout options
-\geometry{a4paper, landscape, margin=0.25in}
+\geometry{a4paper, \theorientation, margin=0.25in}
 \pagestyle{empty} % no page numbers
 \setlength{\parindent}{0pt} % no indent after new lines
 
@@ -35,26 +60,6 @@
 % Reduce spacing for itemize and enumerate
 \setitemize{noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt}
 \setenumerate{noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt}
-
-% % Customize various spacing options
-% % Reduce spacing for tabular
-% \AtBeginEnvironment{tabular}{\vspace*{-0.1cm}}
-% \AtEndEnvironment{tabular}{\vspace*{-0.4cm}}
-% % Reduce spacing for listing
-% \AtBeginEnvironment{lstlisting}{\vspace*{-0.1cm}}
-% \AtEndEnvironment{lstlisting}{\vspace*{-0.1cm}}
-% % Reduce spacing for align
-% \AtBeginEnvironment{align}{\vspace*{-0.1cm}}
-% \AtEndEnvironment{align}{\vspace*{-0.4cm}}
-% % Reduce spacing for align*
-% \AtBeginEnvironment{align*}{\vspace*{-0.1cm}}
-% \AtEndEnvironment{align*}{\vspace*{-0.4cm}}
-% % Reduce spacing for equation
-% \AtBeginEnvironment{equation}{\vspace*{-0.1cm}}
-% \AtEndEnvironment{equation}{\vspace*{-0.4cm}}
-% % Reduce spacing for equation*
-% \AtBeginEnvironment{equation*}{\vspace*{-0.1cm}}
-% \AtEndEnvironment{equation*}{\vspace*{-0.4cm}}
 
 % Color box for sections, subsections, and subsubsections
 \newcommand{\colorsection}[2]{
@@ -66,7 +71,7 @@
 {\sffamily\large\bfseries\color{white}} % font
 {}
 {0pt}
-{\colorsection{RoyalPurple}} % background color
+{\colorsection{\seccolor}} % background color
 \titlespacing*{\section}{-3pt}{\baselineskip}{-\baselineskip}
 
 % Redefine subsection to use fancy color box
@@ -74,7 +79,7 @@
 {\sffamily\large\bfseries\color{white}} % font
 {}
 {0pt}
-{\colorsection{Cerulean}} % background color
+{\colorsection{\subseccolor}} % background color
 \titlespacing*{\subsection}{-3pt}{\baselineskip}{-\baselineskip}
 
 % Redefine subsubsection to use fancy color box
@@ -82,7 +87,7 @@
 {\sffamily\large\bfseries\color{white}} % font
 {}
 {0pt}
-{\colorsection{BlueGreen}} % background color
+{\colorsection{\subsubseccolor}} % background color
 \titlespacing*{\subsubsection}{-3pt}{\baselineskip}{-\baselineskip}
 
 % Setup multiple columns for classic cheat sheet layout
@@ -114,28 +119,17 @@
 \newcommand*{\twitter}[1]{\gdef\@twitter{\href{#1}{\faicon{twitter}}}}
 % GitHub
 \newcommand*{\github}[1]{\gdef\@github{\href{#1}{\faicon{github}}}}
-% Email
-\newcommand*{\email}[1]{\gdef\@email{\href{mailto:#1}{\faicon{envelope}}}}
-% Donate to author of cheat sheet
-\newcommand*{\donate}[1]{\gdef\@donate{\href{#1}{\faicon{cc-paypal}}}}
-% Edit Cheat Sheet Link
-\newcommand*{\editsheet}[1]{\gdef\@editsheet{\href{#1}{\faicon{pencil}}}}
-
-
 
 % Customize title section
 \renewcommand{\maketitle}{
 	\colorsection{gray!0}{ % white background
   		{\huge\thetitle} \\
   		% Only do something if user has defined field in his document
-      	\@ifundefined{@subtitle}{}{{\Large \@subtitle}}
-      	\par
+      \@ifundefined{@subtitle}{}{{\Large \@subtitle}}
+      \par
   		\@ifundefined{@website}{}{\@website}
   		\@ifundefined{@twitter}{}{\@twitter}
   		\@ifundefined{@github}{}{\@github}
-  		% \@ifundefined{@email}{}{\@email}
-  		% \@ifundefined{@donate}{}{\@donate}
-  		% \@ifundefined{@editsheet}{}{\@editsheet}
   		\par
   		\@ifundefined{@author}{}{{\footnotesize by \theauthor}} \par
   		\@ifundefined{@institution}{}{{\footnotesize \@institution}} \par
