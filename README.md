@@ -1,7 +1,11 @@
 # ModernCS - A Modern Cheat Sheet Class for LaTeX
 ModernCS is a custom [LaTeX](https://en.wikipedia.org/wiki/LaTeX) class designed to facilitate the creation of beautiful cheat sheets. It aims to provide a simple set of tools to generate modern looking documents where it's easy to find whatever you're looking for at a glance.
 
-## Getting Started
+## Table of Contents
+1. [Getting Started](#gettingstarted)
+1. [Development](#development)
+
+## Getting Started <a name="gettingstarted"></a>
 
 The following three sections briefly touch upon what software you need to have installed on your system and how to use / install the modernCS class for your own cheat sheets. Additionally we provide a simple example of how to work with the class. Here's a list of important files with a short description:
 * `modernCS.cls` - This is the actual class file
@@ -25,7 +29,7 @@ consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-## Development
+## Development <a name="development"></a>
 ### Dependencies
 * [multicol](https://ctan.org/pkg/multicol?lang=en)
 * [etoolbox](https://ctan.org/pkg/etoolbox?lang=en)
