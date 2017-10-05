@@ -48,10 +48,12 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 <a name="mainfeatures"></a>
 ### Brief Overview of Main Features
 * Great layout presets for a cheat sheet with totally redefined sections and subsections
-* Support for many different beautiful color schemes
+* 10 beautiful color schemes
 * Custom commands for math formulas (e.g. boxed equations)
 * Custom command for text definitions
 * Customizable title section with links to author's website, Twitter, and GitHub if desired
+
+![Overview of the available color schemes](Documentation/Images/colorTable.png "Description goes here")
 
 <a name="documentation"></a>
 ### Full Documentation
