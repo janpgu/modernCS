@@ -53,7 +53,7 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 * Custom command for text definitions
 * Customizable title section with links to author's website, Twitter, and GitHub if desired
 
-<!-- ![Overview of the available color schemes](Documentation/Images/colorTable.png "Description goes here") -->
+Here's an overview of all available color schemes:
 <p align="center">
 <img src="Documentation/Images/colorTable.png" width="400"/>
 </p>
