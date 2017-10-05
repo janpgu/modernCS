@@ -76,6 +76,8 @@ The previous sections covered the majority of important topics, they however can
 * [fontawesome](https://www.ctan.org/tex-archive/fonts/fontawesome)
 * [hyperref](https://ctan.org/pkg/hyperref?lang=en)
 * [mdframed](https://ctan.org/pkg/mdframed?lang=en)
+* [empheq](https://ctan.org/pkg/empheq?lang=en)
+* [tcolorbox](https://ctan.org/pkg/tcolorbox?lang=en)
 
 <a name="upcoming"></a>
 ### Upcoming Features

@@ -1,4 +1,145 @@
 \documentclass{article}
+\usepackage{scrextend}
+\addtokomafont{labelinglabel}{\sffamily}
+\usepackage{booktabs} % nicer tables
+\usepackage{xcolor,colortbl}
+\usepackage{cellspace}
+\setlength\cellspacetoplimit{10pt}
+\setlength\cellspacebottomlimit{10pt}
+
+% Define color schemes
+% Red
+\definecolor{red1}{HTML}{B71C1C}
+\definecolor{red2}{HTML}{E53935}
+\definecolor{red3}{HTML}{E57373}
+% Green
+\definecolor{green1}{HTML}{1B5E20}
+\definecolor{green2}{HTML}{43A047}
+\definecolor{green3}{HTML}{81C784}
+% Blue
+\definecolor{blue1}{HTML}{0D47A1}
+\definecolor{blue2}{HTML}{1E88E5}
+\definecolor{blue3}{HTML}{64B5F6}
+% Purple
+\definecolor{purple1}{HTML}{4A148C}
+\definecolor{purple2}{HTML}{8E24AA}
+\definecolor{purple3}{HTML}{BA68C8}
+% Autumn
+\definecolor{autumn1}{HTML}{8C4646}
+\definecolor{autumn2}{HTML}{D96459}
+\definecolor{autumn3}{HTML}{F2AE72}
+% Maritime
+\definecolor{maritime1}{HTML}{00293C}
+\definecolor{maritime2}{HTML}{1E656D}
+\definecolor{maritime3}{HTML}{4D648D}
+% Cosmopolitan
+\definecolor{cosmopolitan1}{HTML}{8593AE}
+\definecolor{cosmopolitan2}{HTML}{7E675E}
+\definecolor{cosmopolitan3}{HTML}{DDA288}
+% Nature
+\definecolor{nature1}{HTML}{688B8A}
+\definecolor{nature2}{HTML}{A0B084}
+\definecolor{nature3}{HTML}{A57C65}
+% Urban
+\definecolor{urban1}{HTML}{232122}
+\definecolor{urban2}{HTML}{A5C05B}
+\definecolor{urban3}{HTML}{7BA4A8}
+% Classy
+\definecolor{classy1}{HTML}{36454F}
+\definecolor{classy2}{HTML}{488A99}
+\definecolor{classy3}{HTML}{DBAE58}
+
+\newcommand{\cellco}[2]{\cellcolor{#1}\textcolor{white}{{\scriptsize \##2}}}
+
 \begin{document}
-Under construction...	
+\title{ModernCS \\ Full Documentation}
+\author{Jan P. Guggenbuehler}
+\date{\today}
+\maketitle
+\begin{abstract}
+	\noindent ModernCS is an attempt at a modern, beautiful cheat sheet class for \LaTeX. It aims to drastically simplify the creation of attractive and easy to navigate cheat sheets. Besides redefining core concepts like sections and subsections, the class also offers new commands for common tasks such as writing boxed equations or visually distinct textual definitions. In addition, a total of ten stunning color schemes along with other options such as the page orientation are contained within modernCS as well.
+\end{abstract}
+\tableofcontents
+\section{Introduction}
+After its initial creation in September 2017, modernCS has already seen many additions, improvements, and bug fixes. It is now stable and currently in use for lots of different cheat sheets already. Using modernCS enables cheat sheet authors to fully focus on the content (as is the case with the more standard classes in \LaTeX) and removes the obstacles of design, structure, and general layout decisions. This is accomplished by providing the user with a simple set of tools (such as a redefined section command for example), which boosts focus and improves productivity. Figure \ref{fig:mainexample} offers a quick preview of a cheat sheet created with modernCS using the default color theme.
+\subsection{Dependencies}
+ModernCS explicitely requires the following packages:
+\begin{labeling}{xxxxxxxxxxxxxx}
+	\item [\textbf{multicol}] Classic cheat sheet layout with multiple (3 by default) columns
+	\item [\textbf{etoolbox}] Toolbox aimed at package and class authors which provides certain hooks (e.g. \verb AtBeginDocument) which are used to begin and end a multicol environment
+	\item [\textbf{geometry}] Easy and flexible user interface to customize page layout (set orientation, reduce margins, etc.)
+	\item [\textbf{xcolor}] Used to define the custom color schemes for section and subsection titles
+	\item [\textbf{titlesec}] Customize all non-color related aspects of section and subsection titles
+	\item [\textbf{titling}] Make a custom title area fitting for a cheat sheet
+	\item [\textbf{enumitem}] Redefine spacing for itemize and enumerate environments
+	\item [\textbf{fontawesome}] Use of Fontawesome icons in the title area (e.g. Twitter logo)
+	\item [\textbf{hyperref}] Turn icons in title area into clickable links
+	\item [\textbf{mdframed}] Create framed boxes like the textual definition box with a light gray background
+	\item [\textbf{empheq}] Generate more visually attractive boxed equations
+	\item [\textbf{tcolorbox}] Supports styling options for boxed equations
+\end{labeling}
+\subsection{Installation}
+In principle, using the class is as simple as copying the \verb|modernCS.cls| file in the same folder as the \verb|CheatSheet.tex| file and referencing it by starting the document with \verb|\documentclass{modernCS}|.
+You might however want to place these files within a more general directory accessible to your LaTeX distribution of choice, such that you only have one copy of the files on your system even if you have multiple cheat sheets in multiple folders. This also allows you to just change the files in one central location once a new version is released. The steps necessary to accomplish this vary depending on your LaTeX distribution and operating system. A quick google search should enable you to do this in a few minutes.
+\subsection{Simple Example}
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+\section{Features}
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+\subsection{Presets}
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+\subsection{Class Options}
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+\begin{center}
+	\begin{tabular}{Slccc}
+		\toprule
+		\textbf{Name of Color Scheme} & \textbf{Color 1} & \textbf{Color 2} & \textbf{Color 3} \\
+		\midrule
+		Red & \cellco{red1}{B71C1C} & \cellco{red2}{E53935} & \cellco{red3}{E57373} \\
+		Green & \cellco{green1}{1B5E20} & \cellco{green2}{43A047} & \cellco{green3}{81C784} \\
+		Blue & \cellco{blue1}{0D47A1} & \cellco{blue2}{1E88E5} & \cellco{blue3}{64B5F6} \\
+		Purple & \cellco{purple1}{4A148C} & \cellco{purple2}{8E24AA} & \cellco{purple3}{BA68C8} \\
+		\midrule
+		Autumn & \cellco{autumn1}{8C4646} & \cellco{autumn2}{D96459} & \cellco{autumn3}{F2AE72} \\
+		Maritime & \cellco{maritime1}{00293C} & \cellco{maritime2}{1E656D} & \cellco{maritime3}{4D648D} \\
+		Cosmopolitan & \cellco{cosmopolitan1}{8593AE} & \cellco{cosmopolitan2}{7E675E} & \cellco{cosmopolitan3}{DDA288} \\
+		Nature & \cellco{nature1}{688B8A} & \cellco{nature2}{A0B084} & \cellco{nature3}{A57C65} \\
+		Urban & \cellco{urban1}{232122} & \cellco{urban2}{A5C05B} & \cellco{urban3}{7BA4A8} \\
+		Classy & \cellco{classy1}{36454F} & \cellco{classy2}{488A99} & \cellco{classy3}{DBAE58} \\
+		\bottomrule
+	\end{tabular}
+\end{center}
+\subsection{Commands}
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+\subsection{Customizing Class Settings}
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 \end{document}

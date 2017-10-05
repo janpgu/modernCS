@@ -14,8 +14,8 @@
 \RequirePackage{fontawesome} % cool icons for web, twitter, github below title
 \RequirePackage[hidelinks]{hyperref} % make fontawesome icons into links / buttons
 \RequirePackage{mdframed} % used for framed boxes like the definition box
-\RequirePackage{empheq}
-\RequirePackage[most]{tcolorbox}
+\RequirePackage{empheq} % used for colored equation box command
+\RequirePackage[most]{tcolorbox} % used for colored equation box command
 \tcbset{highlight math style={boxsep=1mm,colback=gray!10, boxrule=0.5pt}}
 
 % Define color schemes
