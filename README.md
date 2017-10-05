@@ -60,7 +60,7 @@ Here's an overview of all available color schemes:
 
 <a name="documentation"></a>
 ### Full Documentation
-The previous sections covered the majority of important topics, they however can't replace a full technical documentation, which you can find here: [Documentation/modernCS_Documentation.pdf](Full Documentation)
+The previous sections covered the majority of important topics, they however can't replace a full technical documentation, which you can find here: [Full Documentation](Documentation/modernCS_Documentation.pdf)
 
 <a name="development"></a>
 ## Development
