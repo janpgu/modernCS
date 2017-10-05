@@ -54,7 +54,7 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 * Customizable title section with links to author's website, Twitter, and GitHub if desired
 
 <!-- ![Overview of the available color schemes](Documentation/Images/colorTable.png "Description goes here") -->
-<img src="Documentation/Images/colorTable.png" width="200"/>
+<img src="Documentation/Images/colorTable.png" width="400"/>
 
 <a name="documentation"></a>
 ### Full Documentation
