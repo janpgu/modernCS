@@ -7,4 +7,4 @@
 *.dvi
 testCode.tex
 colors.txt
-/colorSchemes
+ColorSchemes/
