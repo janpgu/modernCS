@@ -18,35 +18,117 @@
 \RequirePackage[most]{tcolorbox}
 \tcbset{highlight math style={boxsep=1mm,colback=gray!10, boxrule=0.5pt}}
 
-% Handle Class options
-% Paper orientation (lanscape vs. portrait)
+% Define color schemes
+% Red
+\definecolor{red1}{HTML}{B71C1C}
+\definecolor{red2}{HTML}{E53935}
+\definecolor{red3}{HTML}{E57373}
+% Green
+\definecolor{green1}{HTML}{1B5E20}
+\definecolor{green2}{HTML}{43A047}
+\definecolor{green3}{HTML}{81C784}
+% Blue
+\definecolor{blue1}{HTML}{0D47A1}
+\definecolor{blue2}{HTML}{1E88E5}
+\definecolor{blue3}{HTML}{64B5F6}
+% Purple
+\definecolor{purple1}{HTML}{4A148C}
+\definecolor{purple2}{HTML}{8E24AA}
+\definecolor{purple3}{HTML}{BA68C8}
+% Autumn
+\definecolor{autumn1}{HTML}{8C4646}
+\definecolor{autumn2}{HTML}{D96459}
+\definecolor{autumn3}{HTML}{F2AE72}
+% Maritime
+\definecolor{maritime1}{HTML}{00293C}
+\definecolor{maritime2}{HTML}{1E656D}
+\definecolor{maritime3}{HTML}{4D648D}
+% Cosmopolitan
+\definecolor{cosmopolitan1}{HTML}{8593AE}
+\definecolor{cosmopolitan2}{HTML}{7E675E}
+\definecolor{cosmopolitan3}{HTML}{DDA288}
+% Nature
+\definecolor{nature1}{HTML}{688B8A}
+\definecolor{nature2}{HTML}{A0B084}
+\definecolor{nature3}{HTML}{A57C65}
+% Urban
+\definecolor{urban1}{HTML}{232122}
+\definecolor{urban2}{HTML}{A5C05B}
+\definecolor{urban3}{HTML}{7BA4A8}
+% Classy
+\definecolor{classy1}{HTML}{36454F}
+\definecolor{classy2}{HTML}{488A99}
+\definecolor{classy3}{HTML}{DBAE58}
+
+% Handle class options
+% Pick page orientation (lanscape vs. portrait)
 \newcommand{\theorientation}{landscape}
 \DeclareOption{landscape}{\renewcommand{\theorientation}{landscape}}
 \DeclareOption{portrait}{\renewcommand{\theorientation}{portrait}}
-% Color scheme
-\newcommand{\seccolor}{RoyalPurple}
-\newcommand{\subseccolor}{Cerulean}
-\newcommand{\subsubseccolor}{BlueGreen}
+% Pick a color scheme
+\newcommand{\seccolor}{maritime1}
+\newcommand{\subseccolor}{maritime2}
+\newcommand{\subsubseccolor}{maritime3}
 \DeclareOption{blue}{
   \renewcommand{\seccolor}{RoyalPurple}
   \renewcommand{\subseccolor}{Cerulean}
   \renewcommand{\subsubseccolor}{BlueGreen}
   }
-\DeclareOption{green}{
-  \renewcommand{\seccolor}{OliveGreen}
-  \renewcommand{\subseccolor}{PineGreen}
-  \renewcommand{\subsubseccolor}{LimeGreen}
-  }
 \DeclareOption{red}{
-  \renewcommand{\seccolor}{BrickRed}
-  \renewcommand{\subseccolor}{Orange}
-  \renewcommand{\subsubseccolor}{Dandelion}
-  }
-\DeclareOption{mono}{
-  \renewcommand{\seccolor}{black}
-  \renewcommand{\subseccolor}{black!65}
-  \renewcommand{\subsubseccolor}{gray!80}
-  }
+	\renewcommand{\seccolor}{red1}
+	\renewcommand{\subseccolor}{red2}
+	\renewcommand{\subsubseccolor}{red3}
+}
+\DeclareOption{green}{
+	\renewcommand{\seccolor}{green1}
+	\renewcommand{\subseccolor}{green2}
+	\renewcommand{\subsubseccolor}{green3}
+}
+\DeclareOption{blue}{
+	\renewcommand{\seccolor}{blue1}
+	\renewcommand{\subseccolor}{blue2}
+	\renewcommand{\subsubseccolor}{blue3}
+}
+\DeclareOption{purple}{
+	\renewcommand{\seccolor}{purple1}
+	\renewcommand{\subseccolor}{purple2}
+	\renewcommand{\subsubseccolor}{purple3}
+}
+\DeclareOption{autumn}{
+	\renewcommand{\seccolor}{autumn1}
+	\renewcommand{\subseccolor}{autumn2}
+	\renewcommand{\subsubseccolor}{autumn3}
+}
+\DeclareOption{vibrant}{
+	\renewcommand{\seccolor}{vibrant1}
+	\renewcommand{\subseccolor}{vibrant2}
+	\renewcommand{\subsubseccolor}{vibrant3}
+}
+\DeclareOption{maritime}{
+	\renewcommand{\seccolor}{maritime1}
+	\renewcommand{\subseccolor}{maritime2}
+	\renewcommand{\subsubseccolor}{maritime3}
+}
+\DeclareOption{cosmopolitan}{
+	\renewcommand{\seccolor}{cosmopolitan1}
+	\renewcommand{\subseccolor}{cosmopolitan2}
+	\renewcommand{\subsubseccolor}{cosmopolitan3}
+}
+\DeclareOption{nature}{
+	\renewcommand{\seccolor}{nature1}
+	\renewcommand{\subseccolor}{nature2}
+	\renewcommand{\subsubseccolor}{nature3}
+}
+\DeclareOption{urban}{
+	\renewcommand{\seccolor}{urban1}
+	\renewcommand{\subseccolor}{urban2}
+	\renewcommand{\subsubseccolor}{urban3}
+}
+\DeclareOption{classy}{
+	\renewcommand{\seccolor}{classy1}
+	\renewcommand{\subseccolor}{classy2}
+	\renewcommand{\subsubseccolor}{classy3}
+}
 \ProcessOptions\relax
 
 % Set layout options
