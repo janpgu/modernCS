@@ -5,6 +5,7 @@
 *.out
 *.gz
 *.dvi
+niceListings.tex
 testCode.tex
 colors.txt
 ColorSchemes/

@@ -7,7 +7,7 @@
 \RequirePackage{multicol} % multiple column layout
 \RequirePackage{etoolbox} % certain hooks like AtBeginDocument
 \RequirePackage{geometry} % paper size, orientation, margins, etc.
-\RequirePackage[usenames, dvipsnames]{xcolor} % better color support
+\RequirePackage[dvipsnames]{xcolor} % better color support
 \RequirePackage{titlesec} % change default styling of (sub)(sub)sections
 \RequirePackage{titling} % commands like \theauthor, \thetitle
 \RequirePackage{enumitem} % global spacing options for itemize and enumerate
@@ -16,7 +16,7 @@
 \RequirePackage{mdframed} % used for framed boxes like the definition box
 \RequirePackage{empheq} % used for colored equation box command
 \RequirePackage[most]{tcolorbox} % used for colored equation box command
-\tcbset{highlight math style={boxsep=1mm,colback=gray!10, boxrule=0.5pt}}
+\tcbset{highlight math style={boxsep=1mm,colback=gray!20, boxrule=0.5pt}}
 
 % Define color schemes
 % Red
@@ -178,7 +178,7 @@
 
 % Custom box for text definitions
 \newcommand*{\defbox}[2]{
-	\begin{mdframed}[backgroundcolor=gray!10]
+	\begin{mdframed}[backgroundcolor=gray!20]
 		\textbf{#1:} #2
 	\end{mdframed}
 }

@@ -18,10 +18,7 @@ ModernCS is a custom [LaTeX](https://en.wikipedia.org/wiki/LaTeX) class designed
 <a name="gettingstarted"></a>
 ## Getting Started
 
-The following three sections briefly touch upon what software you need to have installed on your system and how to use / install the modernCS class for your own cheat sheets. Additionally we provide a simple example of how to work with the class. Here's a list of important files with a short description:
-* `modernCS.cls` - This is the actual class file
-* `CheatSheet_Example.tex` - An example LaTeX document, which makes use of the modernCS class
-* `niceListings.tex` - Some LaTeX code (you can easily customize it) to make code listings in your cheat sheet look nicer
+The following three sections briefly touch upon what software you need to have installed on your system and how to use / install the modernCS class for your own cheat sheets. Additionally we provide a simple example of how to work with the class.
 
 <a name="prerequisites"></a>
 ### Prerequisites
@@ -30,9 +27,9 @@ Since this is a LaTeX class you obviously need to have a working installation of
 
 <a name="installation"></a>
 ### Installation
-In principle, using the class is as simple as copying the `modernCS.cls` file in the same folder as your `CheatSheet.tex` file and referencing it with `\documentclass{modernCS}`. If you want the same style for code listings as shown in the example cheat sheet, you also need to place `niceListings.tex` in the same folder and load it with `\input{niceListings}` in the preamble of your cheat sheet document.
+In principle, using the class is as simple as copying the `modernCS.cls` file in the same folder as your `CheatSheet.tex` file and referencing it with `\documentclass{modernCS}`.
 
-You might however want to place these files within a more general directory accessible to your LaTeX distribution of choice, such that you only have one copy of the files on your system even if you have multiple cheat sheets in multiple folders. This also allows you to just change the files in one central location once a new version is released. The steps necessary to accomplish this vary depending on your LaTeX distribution and operating system. A quick google search should enable you to do this in a few minutes.
+You might however want to place the file within a more general directory accessible to your LaTeX distribution of choice, such that you only have one copy on your system even if you have multiple cheat sheets in multiple folders. This also allows you to just change the file in one central location once a new version is released. The steps necessary to accomplish this vary depending on your LaTeX distribution and operating system. A quick google search should enable you to do this in a few minutes.
 
 <a name="simple"></a>
 ### Simple Example
@@ -61,6 +58,8 @@ Here's an overview of all available color schemes:
 <a name="documentation"></a>
 ### Full Documentation
 The previous sections covered the majority of important topics, they however can't replace a full technical documentation, which you can find here: [Full Documentation](Documentation/modernCS_Documentation.pdf)
+
+Note that the documentation is still a work in progress and missing a lot of key sections.
 
 <a name="development"></a>
 ## Development
