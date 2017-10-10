@@ -206,9 +206,9 @@
 \renewcommand{\maketitle}{
 	\colorsection{gray!0}{ % white background
   		{\huge\thetitle} \\
-  		% Only do something if user has defined field in his document
-      \@ifundefined{@subtitle}{}{{\Large \@subtitle}}
-      \par
+	  	% Only do something if user has defined field in his document
+		\@ifundefined{@subtitle}{}{{\Large \@subtitle}}
+      	\par
   		\@ifundefined{@website}{}{\@website}
   		\@ifundefined{@twitter}{}{\@twitter}
   		\@ifundefined{@github}{}{\@github}

@@ -3,46 +3,120 @@
 \usepackage{booktabs} % nicer tables
 \usepackage{amsmath} % math stuff
 \usepackage{chemfig} % chemistry figures
+\usepackage{listings} % code listings
+\usepackage{lstautogobble} % fix relative indenting in code listings
+\usepackage{zi4} % font for code listing
 \usepackage[os=win]{menukeys} % display keyboard buttons
+\usepackage{colortbl} % ignore this (only used to display all color schemes)
+\usepackage{cellspace} % ignore this (only used to display all color schemes)
 
 \begin{document}
 \title{Cheat Sheet}
-\subtitle{Example}
+\subtitle{Just an Example}
 \author{Jan P. Guggenbuehler}
-\website{https://www.google.com}
 \twitter{https://twitter.com/janpgu}
 \github{https://github.com/janpgu}
 \date{\today{}}
 \maketitle
 
-\section{Just a Section}
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.
-\defbox{Interesting definition}{Here you can define some concept. Pretty neat, isn't it?}
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+\section{Introductory Section}
+Dear potential user of this cheat sheet class, in this example document you'll see some of the features of this class in action. Let us begin by looking at a way to present a text definition with the \texttt{defbox} command.
+\defbox{Cheat sheet}{A cheat sheet (also cheatsheet) or crib sheet is a concise set of notes used for quick reference.}
+In order to create these documents, this class offers the following features:
 \begin{itemize}
-	\item Item 1
-	\item Item 2
-	\item Item 3
+	\item Sensible document layout presets (e.g. margins)
+	\item Reduced spacing for \texttt{itemize} and \texttt{enumerate} environments (like you see in this very example)
+	\item Redefined commands for (sub)(sub)sections that result in the here presented section formatting
+	\item Special title area with useful additional fields (e.g. link to an author's GitHub profile)
+	\item 10 beautiful color schemes
+	\item Custom command for important equations
+	\item Ensured and demonstrated compatibility with useful packages for common cheat sheet scenatios (booktabs, amsmath, chemfig, and menukeys)
 \end{itemize}
-Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat.
+For more details on some of these features  and some inspiration for your own documents, please see later sections in this example cheat sheet.
 
-\subsection{Merely a Subsection}
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua.
+\subsection{A Subsection about Structure and Design}
+This subsection first goes into the layout presets (e.g. margins) and structural objects (e.g. sections) of this class and then preceeds to take a quick look at the available color schemes and how to use them.
+
+\subsubsection{A Subsubsection about Layout and Structure}
+The layout presets for this class are quite simple, by default the class uses the geometry package to set the paper size to A4, with 0.25 inches margin on all four sides. Furthermore, the orientation is set to landscape, but can easily be changed while specifying the document class (i.e. \verb|\documentclass[portrait]{modernCS}|). From a structural viewpoint, the class is built upon a three column layout and offers 4 hierarchical elements to structure the cheat sheet:
 \begin{enumerate}
-	\item Item 1
-	\item Item 2
-	\item Item 3
+	\item Title area
+	\item Section
+	\item Subsection
+	\item Subsubsection
 \end{enumerate}
-Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat.
+The optional title area can be inserted using the classic \verb|\maketitle| command, which then constructs a custom title area with both the standard fields (e.g. title, author, and date) as well as some new fields (e.g. subtitle, institution, website, Twitter profile, and GitHub profile). These social link fields (if used) place a FontAwesome icon with a link in the title area. Here's an example of how to include a GitHub profile or maybe even the specific repository containing the source of a particular cheat sheet: \verb|\github{\github{https://github.com/janpgu}}|. \par
+The (sub)(sub)section commands all produce the same basic layout and only differ in color.
+\subsubsection{A Subsubsection about Color Schemes}
+This cheat sheet class comes with 10 built-in color schemes:
+% Define color schemes
+% Red
+\definecolor{red1}{HTML}{B71C1C}
+\definecolor{red2}{HTML}{E53935}
+\definecolor{red3}{HTML}{E57373}
+% Green
+\definecolor{green1}{HTML}{1B5E20}
+\definecolor{green2}{HTML}{43A047}
+\definecolor{green3}{HTML}{81C784}
+% Blue
+\definecolor{blue1}{HTML}{0D47A1}
+\definecolor{blue2}{HTML}{1E88E5}
+\definecolor{blue3}{HTML}{64B5F6}
+% Purple
+\definecolor{purple1}{HTML}{4A148C}
+\definecolor{purple2}{HTML}{8E24AA}
+\definecolor{purple3}{HTML}{BA68C8}
+% Autumn
+\definecolor{autumn1}{HTML}{8C4646}
+\definecolor{autumn2}{HTML}{D96459}
+\definecolor{autumn3}{HTML}{F2AE72}
+% Maritime
+\definecolor{maritime1}{HTML}{00293C}
+\definecolor{maritime2}{HTML}{1E656D}
+\definecolor{maritime3}{HTML}{4D648D}
+% Cosmopolitan
+\definecolor{cosmopolitan1}{HTML}{8593AE}
+\definecolor{cosmopolitan2}{HTML}{7E675E}
+\definecolor{cosmopolitan3}{HTML}{DDA288}
+% Nature
+\definecolor{nature1}{HTML}{688B8A}
+\definecolor{nature2}{HTML}{A0B084}
+\definecolor{nature3}{HTML}{A57C65}
+% Urban
+\definecolor{urban1}{HTML}{232122}
+\definecolor{urban2}{HTML}{A5C05B}
+\definecolor{urban3}{HTML}{7BA4A8}
+% Classy
+\definecolor{classy1}{HTML}{36454F}
+\definecolor{classy2}{HTML}{488A99}
+\definecolor{classy3}{HTML}{DBAE58}
+\newcommand{\cellco}[2]{\cellcolor{#1}\textcolor{white}{{\scriptsize \##2}}}
+\begin{center}
+	\begin{tabular}{Slccc}
+		\toprule
+		\textbf{Color Scheme} & \textbf{Color 1} & \textbf{Color 2} & \textbf{Color 3} \\
+		\midrule
+		Red & \cellco{red1}{B71C1C} & \cellco{red2}{E53935} & \cellco{red3}{E57373} \\
+		Green & \cellco{green1}{1B5E20} & \cellco{green2}{43A047} & \cellco{green3}{81C784} \\
+		Blue & \cellco{blue1}{0D47A1} & \cellco{blue2}{1E88E5} & \cellco{blue3}{64B5F6} \\
+		Purple & \cellco{purple1}{4A148C} & \cellco{purple2}{8E24AA} & \cellco{purple3}{BA68C8} \\
+		\midrule
+		Autumn & \cellco{autumn1}{8C4646} & \cellco{autumn2}{D96459} & \cellco{autumn3}{F2AE72} \\
+		Maritime & \cellco{maritime1}{00293C} & \cellco{maritime2}{1E656D} & \cellco{maritime3}{4D648D} \\
+		Cosmopolitan & \cellco{cosmopolitan1}{8593AE} & \cellco{cosmopolitan2}{7E675E} & \cellco{cosmopolitan3}{DDA288} \\
+		Nature & \cellco{nature1}{688B8A} & \cellco{nature2}{A0B084} & \cellco{nature3}{A57C65} \\
+		Urban & \cellco{urban1}{232122} & \cellco{urban2}{A5C05B} & \cellco{urban3}{7BA4A8} \\
+		Classy & \cellco{classy1}{36454F} & \cellco{classy2}{488A99} & \cellco{classy3}{DBAE58} \\
+		\bottomrule
+	\end{tabular}
+\end{center}
+The default color scheme is set to \textit{Maritime} but can of course be changed through the class options. As an example, if you wanted a cheat sheet with the \textit{Autumn} color scheme, you could change it as follows: \verb|\documentclass[autumn]{modernCS}|. These color options can also be combined with the orientation option and thus \verb|\documentclass[green, portrait]{modernCS}| would result in a portrait cheat sheet with the green color scheme.
 
-\subsection{Merely another Subsection}
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+\section{A Section with Examples and Inspiration}
+In this section we'll look at some common use cases and show off some examples of what could be used to create great cheat sheets. We'll cover tables, code listings, ways to display keyboard shortcuts and file paths, mathematics and physics, and finally some chemistry.
+
+\subsection{Tables and Code Listings}
+In the section about color schemes, you've already seen that tables (especially with the booktabs package) integrate nicely with this class. Since that table was slightly more advanced, let us briefly look at a very basic table made with the booktabs package:
 \begin{center}
 \begin{tabular}{lll}
 \toprule
@@ -55,80 +129,74 @@ Column1d & Column2d & Column3d \\
 \bottomrule
 \end{tabular}
 \end{center}
-Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat.
-
-\subsubsection{And a Subsubsection}
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua.
-Look at this cool keyboard shortcut: \keys{\ctrl + \Alt + \del}
-Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. To search for anything specific just hit \keys{\ctrl + F}, type in your query and confirm by pressing \keys{\enter}
-
-\section{Now a new Section}
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua.
-Ut enim ad minigit initm veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur.
+While these types of tables are certainly useful for cheat sheets, a combination of code / commands and text are particularly useful and of course possible as well:
 \begin{center}
 \begin{tabular}{ll}
 \toprule
 Command & Explanation \\
 \midrule
-\verb+git status+ & Changed files in working area \\
-\verb+git diff+ & Changes to tracked files \\
-\verb+git add .+ & Add all current changes to next commit \\
+\verb|git status| & Changed files in working area \\
+\verb|git diff| & Changes to tracked files \\
+\verb|git add .| & Add all current changes to next commit \\
 \bottomrule
 \end{tabular}
 \end{center}
-Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua.
-\subsection{A Mathy Subsection}
-Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat.
+And finally, classic code listings made with the listings package obviously work as well:
+% Define custom colors for code listings
+\definecolor{bluekeywords}{rgb}{0.13, 0.13, 1}
+\definecolor{greencomments}{rgb}{0, 0.5, 0}
+\definecolor{redstrings}{rgb}{0.9, 0, 0}
+\definecolor{graynumbers}{rgb}{0.5, 0.5, 0.5}
+
+% Define style options for nicer code listings
+\lstset{
+    autogobble,
+    columns=fullflexible,
+    showspaces=false,
+    showtabs=false,
+    breaklines=true,
+    showstringspaces=false,
+    breakatwhitespace=true,
+    escapeinside={(*@}{@*)},
+    commentstyle=\color{greencomments},
+    keywordstyle=\color{bluekeywords},
+    stringstyle=\color{redstrings},
+    numberstyle=\color{graynumbers},
+    basicstyle=\ttfamily\footnotesize,
+    framesep=12pt,
+    xleftmargin=12pt,
+    tabsize=4,
+    captionpos=b
+}
+\begin{lstlisting}[language=Python]
+import numpy as np
+x = 'hello '
+y = 'world'
+z = np.random.randn()
+print(x, y)
+\end{lstlisting}
+Now let's look at a cool package, which helps us with displaying paths and shortcuts.
+\subsection{File Paths and Keyboard Shortcuts}
+Let's quickly assume we wanted to display a particular path to the folder containing some images on a website. Thanks to the menukeys package we're able to render it as: \menu{var>www>img}. The same package also enables us to display keyboard shortcuts such as the iconic: \keys{\ctrl + \Alt + \del} or \keys{\ctrl + F}.
+\subsection{Mathematics and Physics}
+If your cheat sheets are anything like mine, you surely need a lot of math on them. One of the easiest ways to include an equation in your cheat sheet is the classic \LaTeX{} bracket notation:
 \[
 \mathrm{e}^{i\pi} + 1 = 0
 \]
-Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur.
+If you want to highlight an important equation, the modernCS class offers the \texttt{impeq} command, which produces the following output:
 \impeq{
 	\mathrm{e}^{i\pi} + 1 = 0
 }
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua.
-\subsubsection{Awesome Physics Subsubsection}
-Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur.
+Finally, the align environment from the amsmath package works as expected as well:
 \begin{align*}
 	\nabla \cdot \mathbf{D} &= \rho \\
 	\nabla \cdot \mathbf{B} &= 0 \\
 	\nabla \times \mathbf{E} &= -\frac{\partial \mathbf{B}} {\partial t} \\
 	\nabla \times \mathbf{H} &= \mathbf{J} + \frac{\partial \mathbf{D}} {\partial t}
 \end{align*}
-Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-\subsection{How About Some Chemistry?}
-Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur.
+\subsection{Chemistry}
+The excellent chemfig package for 2D drawing of chemical structures might prove useful for certain kinds of cheat sheets as well:
 \begin{center}
 \chemfig{CH_3CH_2-[:-60,,3]C(-[:-120]H_3C)=C(-[:-60]H)-[:60]C|{(CH_3)_3}}
 \end{center}
-Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
 \end{document}
